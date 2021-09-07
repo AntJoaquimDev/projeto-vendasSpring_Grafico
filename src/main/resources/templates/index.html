@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Vendas-Modal-Graph</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style/styleCss.css" />
+</head>
+
+<body>
+
+	<header>
+		<nav class="menu">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Lista de Vendas</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li>
+						<a th:href="@{/barChart}" class="waves-effect waves-light btn">
+							<i class="material-icons left">graphic_eq</i>Gráfico de Vendas</a>
+						<a href="/formVendas" class="waves-effect waves-light btn"><i
+								class="material-icons left">add_circle_outline</i>Cadastrar
+							Vendas</a> <br></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Nome-Produto</th>
+				<th>Quantidade</th>
+				<th>Valor</th>
+				<th>Data</th>
+
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="vendas: ${vendas}">
+				<td><span th:text="${vendas.nomeProduto}"></span></a></td>
+				<td><span th:text="${vendas.quantidade}"></span></td>
+				<td><span th:text="${vendas.valor}"></span></td>
+				<td><span th:text="${vendas.dataVenda}"></span></td>
+
+			</tr>
+		</tbody>
+
+	</table>
+
+	<div aline="center">
+		<a th:href="@{/barChart}">Gráfico de Vendas</a><br>
+	</div>
+
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+</body>
+
+
+</html>
+
+</html>

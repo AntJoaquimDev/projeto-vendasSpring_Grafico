@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>VendasApp</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style/styleCss.css"/>
+</head>
+
+</head>
+
+<body>
+
+<header>
+    <nav class="menu">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Lista de Vendas</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/index" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista de Vendas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+<div class="container formEvento">
+    <form class="container" method="post">
+        Produto: <input type="text" value="" name="nomeProduto"/>
+        <div class="row">
+            <div class="input-field col s6">
+                Quntidade: <input type="text" value="" name="quantidade"/>
+            </div>
+              <div class="input-field col s6">
+                Valor: <input type="text" value="" name="valor"/>
+            </div>
+            <div class="input-field col s3">
+                Data-Venda: <input type="date" value="" name="dataVenda"/>
+            </div>
+            
+           
+           
+        </div>
+        <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+
+    </form>
+</div>
+<div class="row">
+			<form action="buscarVendas" method="post" >
+				<div class="input-field col s6">
+					<i class="material-icons prefix">pageview</i>
+					<input id="buscarVendas" name="buscarVendas" type="text" class="validate">
+					<label for="buscarVendas">Pesquizer Vendas P/ Nome:</label>
+					<input type="submit" value="Buscar Vendas" class="waves-effect waves-light btn">
+				</div>
+			</form>
+		</div>
+		
+		
+</body>
+
+</html>
